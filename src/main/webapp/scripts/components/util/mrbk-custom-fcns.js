@@ -12,10 +12,6 @@ GOC.prototype = {
             datePicker = '<input type="date" class="form-control" name="'+prop.name+'" id="'+prop.id+'" ng-model="'+prop.ngModel+'" data-provide="datepicker" placeholder="Yıl-ay-gün">';
         }
         $('#'+prop.formGroupId).append(datePicker);
-
-
-
-
     }
 }
 
