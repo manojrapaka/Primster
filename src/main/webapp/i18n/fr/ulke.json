@@ -1,0 +1,20 @@
+{
+    "primApp": {
+        "ulke" : {
+            "home": {
+                "title": "Ulkes",
+                "createLabel": "Créer un nouveau Ulke",
+                "createOrEditLabel": "Créer ou éditer un Ulke"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Ulke {{ id }} ?"
+            },
+            "detail": {
+                "title": "Ulke"
+            },
+            "adi": "Adi",
+            "grup": "Grup"
+        }
+    }
+}
+

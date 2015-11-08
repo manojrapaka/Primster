@@ -1,0 +1,79 @@
+<div>
+    <h2 translate="primApp.havuz.home.title">Havuzs</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="havuz.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="primApp.havuz.home.createLabel">Create a new Havuz</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteHavuzConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(havuz.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="primApp.havuz.delete.question" translate-values="{id: '{{havuz.id}}'}">Are you sure you want to delete this Havuz?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="global.field.id">ID</th>
+                    <th translate="primApp.havuz.tarih">Tarih</th>
+                    <th translate="primApp.havuz.basTarih">BasTarih</th>
+                    <th translate="primApp.havuz.bitTarih">BitTarih</th>
+                    <th translate="primApp.havuz.tutar">Tutar</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="loadPage(page + 1)" infinite-scroll-disabled="links['last'] == page">
+                <tr ng-repeat="havuz in havuzs track by havuz.id">
+                    <td><a ui-sref="havuz.detail({id:havuz.id})">{{havuz.id}}</a></td>
+                    <td>{{havuz.tarih}}</td>
+                    <td>{{havuz.basTarih}}</td>
+                    <td>{{havuz.bitTarih}}</td>
+                    <td>{{havuz.tutar}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="havuz.detail({id:havuz.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="havuz.edit({id:havuz.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(havuz.id)"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

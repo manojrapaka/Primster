@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151105191434_added_entity_Havuz.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151105191801_added_entity_History.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151105192014_added_entity_Prim.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151105193011_added_entity_Gorev.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151105203332_added_entity_Grup.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151105203459_added_entity_Ulke.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151105205425_added_entity_Calisan.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151105205025_added_entity_Hakedis.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151105200301_added_entity_Satis.xml" relativeToChangelogFile="false"/>
+    <!-- JHipster will add liquibase changelogs here -->
+</databaseChangeLog>

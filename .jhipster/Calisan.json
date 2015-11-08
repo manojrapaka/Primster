@@ -1,0 +1,29 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "gorev",
+            "otherEntityName": "gorev",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "adi"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "adi",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMinlength": "1",
+            "fieldValidateRulesPattern": "^[a-zA-Z0-9]*$",
+            "fieldValidateRulesPatternJava": "^[a-zA-Z0-9]*$"
+        }
+    ],
+    "changelogDate": "20151105205425",
+    "dto": "no",
+    "pagination": "infinite-scroll"
+}

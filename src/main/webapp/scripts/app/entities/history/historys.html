@@ -1,0 +1,81 @@
+<div>
+    <h2 translate="primApp.history.home.title">Historys</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="history.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="primApp.history.home.createLabel">Create a new History</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteHistoryConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(history.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="primApp.history.delete.question" translate-values="{id: '{{history.id}}'}">Are you sure you want to delete this History?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="global.field.id">ID</th>
+                    <th translate="primApp.history.kolonAdi">KolonAdi</th>
+                    <th translate="primApp.history.deger">Deger</th>
+                    <th translate="primApp.history.tabloAdi">TabloAdi</th>
+                    <th translate="primApp.history.tarih">Tarih</th>
+                    <th translate="primApp.history.recId">RecId</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="loadPage(page + 1)" infinite-scroll-disabled="links['last'] == page">
+                <tr ng-repeat="history in historys track by history.id">
+                    <td><a ui-sref="history.detail({id:history.id})">{{history.id}}</a></td>
+                    <td>{{history.kolonAdi}}</td>
+                    <td>{{history.deger}}</td>
+                    <td>{{history.tabloAdi}}</td>
+                    <td>{{history.tarih}}</td>
+                    <td>{{history.recId}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="history.detail({id:history.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="history.edit({id:history.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(history.id)"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

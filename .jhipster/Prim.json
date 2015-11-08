@@ -1,0 +1,35 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "adi",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMinlength": "5",
+            "fieldValidateRulesMaxlength": 20,
+            "fieldValidateRulesPattern": "^[a-zA-Z0-9]*$",
+            "fieldValidateRulesPatternJava": "^[a-zA-Z0-9]*$"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "yuzde",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required",
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": 0,
+            "fieldValidateRulesMax": 100
+        }
+    ],
+    "changelogDate": "20151105192014",
+    "dto": "no",
+    "pagination": "infinite-scroll"
+}

@@ -1,0 +1,22 @@
+{
+    "primApp": {
+        "gorev" : {
+            "home": {
+                "title": "Gorevs",
+                "createLabel": "Create a new Gorev",
+                "createOrEditLabel": "Create or edit a Gorev"
+            },
+            "created": "A new Gorev is created with identifier {{ param }}",
+            "updated": "A Gorev is updated with identifier {{ param }}",
+            "deleted": "A Gorev is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Gorev {{ id }}?"
+            },
+            "detail": {
+                "title": "Gorev"
+            },
+            "adi": "Adi",
+            "prim": "Prim"
+        }
+    }
+}

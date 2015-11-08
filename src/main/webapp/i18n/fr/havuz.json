@@ -1,0 +1,22 @@
+{
+    "primApp": {
+        "havuz" : {
+            "home": {
+                "title": "Havuzs",
+                "createLabel": "Créer un nouveau Havuz",
+                "createOrEditLabel": "Créer ou éditer un Havuz"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Havuz {{ id }} ?"
+            },
+            "detail": {
+                "title": "Havuz"
+            },
+            "tarih": "Tarih",
+            "basTarih": "BasTarih",
+            "bitTarih": "BitTarih",
+            "tutar": "Tutar"
+        }
+    }
+}
+

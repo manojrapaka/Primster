@@ -1,0 +1,19 @@
+{
+    "primApp": {
+        "calisan" : {
+            "home": {
+                "title": "Calisans",
+                "createLabel": "Create a new Calisan",
+                "createOrEditLabel": "Create or edit a Calisan"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Calisan {{ id }}?"
+            },
+            "detail": {
+                "title": "Calisan"
+            },
+            "adi": "Adi",
+            "gorev": "Gorev"
+        }
+    }
+}

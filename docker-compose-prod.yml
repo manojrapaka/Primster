@@ -1,0 +1,11 @@
+jhipster-prod-postgresql:
+  container_name: Prim-prod-postgresql
+  image: postgres
+  # volumes:
+  # - ~/volumes/jhipster/Prim/prod-postgresql/:/var/lib/postgresql/
+  environment:
+  - POSTGRES_USER=Prim
+  - POSTGRES_PASSWORD=
+  ports:
+  - "5432:5432"
+

@@ -1,0 +1,19 @@
+{
+    "primApp": {
+        "prim" : {
+            "home": {
+                "title": "Prims",
+                "createLabel": "Create a new Prim",
+                "createOrEditLabel": "Create or edit a Prim"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Prim {{ id }}?"
+            },
+            "detail": {
+                "title": "Prim"
+            },
+            "adi": "Adi",
+            "yuzde": "Yuzde"
+        }
+    }
+}

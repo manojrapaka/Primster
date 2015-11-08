@@ -1,0 +1,25 @@
+{
+    "primApp": {
+        "satis" : {
+            "home": {
+                "title": "Satiss",
+                "createLabel": "Create a new Satis",
+                "createOrEditLabel": "Create or edit a Satis"
+            },
+            "created": "A new Satis is created with identifier {{ param }}",
+            "updated": "A Satis is updated with identifier {{ param }}",
+            "deleted": "A Satis is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Satis {{ id }}?"
+            },
+            "detail": {
+                "title": "Satis"
+            },
+            "faturaNo": "FaturaNo",
+            "tarih": "Tarih",
+            "tutar": "Tutar",
+            "calisan": "Calisan",
+            "ulke": "Ulke"
+        }
+    }
+}

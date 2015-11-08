@@ -1,0 +1,20 @@
+{
+    "primApp": {
+        "grup" : {
+            "home": {
+                "title": "Grups",
+                "createLabel": "Créer un nouveau Grup",
+                "createOrEditLabel": "Créer ou éditer un Grup"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Grup {{ id }} ?"
+            },
+            "detail": {
+                "title": "Grup"
+            },
+            "adi": "Adi",
+            "katsayi": "Katsayi"
+        }
+    }
+}
+

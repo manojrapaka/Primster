@@ -1,0 +1,20 @@
+{
+    "primApp": {
+        "prim" : {
+            "home": {
+                "title": "Prims",
+                "createLabel": "Créer un nouveau Prim",
+                "createOrEditLabel": "Créer ou éditer un Prim"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Prim {{ id }} ?"
+            },
+            "detail": {
+                "title": "Prim"
+            },
+            "adi": "Adi",
+            "yuzde": "Yuzde"
+        }
+    }
+}
+

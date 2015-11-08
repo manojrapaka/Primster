@@ -1,0 +1,28 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "prim",
+            "otherEntityName": "prim",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "adi"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "adi",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "1",
+            "fieldValidateRulesMaxlength": "100"
+        }
+    ],
+    "changelogDate": "20151105193011",
+    "dto": "no",
+    "pagination": "infinite-scroll"
+}

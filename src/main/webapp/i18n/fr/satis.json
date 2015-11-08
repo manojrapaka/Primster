@@ -1,0 +1,23 @@
+{
+    "primApp": {
+        "satis" : {
+            "home": {
+                "title": "Satiss",
+                "createLabel": "Créer un nouveau Satis",
+                "createOrEditLabel": "Créer ou éditer un Satis"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Satis {{ id }} ?"
+            },
+            "detail": {
+                "title": "Satis"
+            },
+            "faturaNo": "FaturaNo",
+            "tarih": "Tarih",
+            "tutar": "Tutar",
+            "calisan": "Calisan",
+            "ulke": "Ulke"
+        }
+    }
+}
+

@@ -1,0 +1,62 @@
+
+<div>
+    <h2><span translate="primApp.satis.detail.title">Satis</span> {{satis.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="primApp.satis.faturaNo">FaturaNo</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{satis.faturaNo}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="primApp.satis.tarih">Tarih</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{satis.tarih}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="primApp.satis.tutar">Tutar</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{satis.tutar}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="primApp.satis.calisan">calisan</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="calisan.detail({id:satis.calisan.id})">{{satis.calisan.adi}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="primApp.satis.ulke">ulke</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="ulke.detail({id:satis.ulke.id})">{{satis.ulke.adi}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,20 @@
+{
+    "health": {
+        "title": "Health",
+        "refresh.button": "Yenile",
+        "stacktrace": "Stacktrace",
+        "indicator": {
+            "diskSpace": "Disk space",
+            "mail": "E-posta",
+            "db": "Veritabanı"
+        },
+        "table": {
+            "service": "Hizmetin adı",
+            "status": "Durum"
+        },
+        "status": {
+            "UP": "AKTİF",
+            "DOWN": "DEAKTİF"
+        }
+    }
+}

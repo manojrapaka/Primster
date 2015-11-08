@@ -1,0 +1,26 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "grup",
+            "otherEntityName": "grup",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "adi"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "adi",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength"
+            ],
+            "fieldValidateRulesMinlength": "1"
+        }
+    ],
+    "changelogDate": "20151105203459",
+    "dto": "no",
+    "pagination": "infinite-scroll"
+}

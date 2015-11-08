@@ -1,0 +1,21 @@
+{
+    "primApp": {
+        "havuz" : {
+            "home": {
+                "title": "Havuzs",
+                "createLabel": "Create a new Havuz",
+                "createOrEditLabel": "Create or edit a Havuz"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Havuz {{ id }}?"
+            },
+            "detail": {
+                "title": "Havuz"
+            },
+            "tarih": "Tarih",
+            "basTarih": "BasTarih",
+            "bitTarih": "BitTarih",
+            "tutar": "Tutar"
+        }
+    }
+}

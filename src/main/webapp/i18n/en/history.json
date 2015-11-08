@@ -1,0 +1,25 @@
+{
+    "primApp": {
+        "history" : {
+            "home": {
+                "title": "Historys",
+                "createLabel": "Create a new History",
+                "createOrEditLabel": "Create or edit a History"
+            },
+            "created": "A new History is created with identifier {{ param }}",
+            "updated": "A History is updated with identifier {{ param }}",
+            "deleted": "A History is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete History {{ id }}?"
+            },
+            "detail": {
+                "title": "History"
+            },
+            "kolonAdi": "KolonAdi",
+            "deger": "Deger",
+            "tabloAdi": "TabloAdi",
+            "tarih": "Tarih",
+            "recId": "RecId"
+        }
+    }
+}

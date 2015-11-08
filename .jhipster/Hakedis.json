@@ -1,0 +1,42 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "calisan",
+            "otherEntityName": "calisan",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "adi"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "tarih",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "basTarih",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "bitTarih",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "prim",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20151105205025",
+    "dto": "no",
+    "pagination": "infinite-scroll"
+}

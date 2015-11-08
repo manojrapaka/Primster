@@ -1,0 +1,43 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "calisan",
+            "otherEntityName": "calisan",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "adi"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "ulke",
+            "otherEntityName": "ulke",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "adi"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "faturaNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "tarih",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "tutar",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": 0
+        }
+    ],
+    "changelogDate": "20151105200301",
+    "dto": "no",
+    "pagination": "infinite-scroll"
+}

@@ -1,0 +1,79 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="mySatisLabel" translate="primApp.satis.home.createOrEditLabel">Create or edit a Satis</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="satis.id" readonly>
+        </div>
+        
+        <div class="form-group">
+            <label translate="primApp.satis.faturaNo" for="field_faturaNo">FaturaNo</label>
+            <input type="text" class="form-control" name="faturaNo" id="field_faturaNo"
+                    ng-model="satis.faturaNo"
+                    >
+        </div>
+        <script type="text/javascript">
+            
+            var prop = {
+                formGroupId : 'satis-dialog-date',
+                name : 'tarih',
+                id : 'field_tarih',
+                ngModel : 'satis.tarih'
+            }
+            goc.browserBasedHtmlDate(prop);
+            
+        </script>
+        <div class="form-group" id='satis-dialog-date'>
+            <label translate="primApp.satis.tarih" for="field_tarih">Tarih</label>
+        </div>
+        <div class="form-group">
+            <label translate="primApp.satis.tutar" for="field_tutar">Tutar</label>
+            <input type="number" class="form-control" name="tutar" id="field_tutar"
+                    ng-model="satis.tutar"
+                    required min="0">
+            <div ng-show="editForm.tutar.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.tutar.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.tutar.$error.min" translate="entity.validation.min" translate-value-min="0">
+                    This field should be more than 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.tutar.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="primApp.satis.calisan" for="field_calisan">calisan</label>
+            <select class="form-control" id="field_calisan" name="calisan" ng-model="satis.calisan" ng-options="calisan as calisan.adi for calisan in calisans track by calisan.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="primApp.satis.ulke" for="field_ulke">ulke</label>
+            <select class="form-control" id="field_ulke" name="ulke" ng-model="satis.ulke" ng-options="ulke as ulke.adi for ulke in ulkes track by ulke.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,33 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "kolonAdi",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "deger",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "tabloAdi",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "tarih",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "recId",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20151105191801",
+    "dto": "no",
+    "pagination": "infinite-scroll"
+}

@@ -1,0 +1,23 @@
+{
+    "primApp": {
+        "history" : {
+            "home": {
+                "title": "Historys",
+                "createLabel": "Créer un nouveau History",
+                "createOrEditLabel": "Créer ou éditer un History"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le History {{ id }} ?"
+            },
+            "detail": {
+                "title": "History"
+            },
+            "kolonAdi": "KolonAdi",
+            "deger": "Deger",
+            "tabloAdi": "TabloAdi",
+            "tarih": "Tarih",
+            "recId": "RecId"
+        }
+    }
+}
+

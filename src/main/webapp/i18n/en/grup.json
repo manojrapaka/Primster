@@ -1,0 +1,22 @@
+{
+    "primApp": {
+        "grup" : {
+            "home": {
+                "title": "Grups",
+                "createLabel": "Create a new Grup",
+                "createOrEditLabel": "Create or edit a Grup"
+            },
+            "created": "A new Grup is created with identifier {{ param }}",
+            "updated": "A Grup is updated with identifier {{ param }}",
+            "deleted": "A Grup is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Grup {{ id }}?"
+            },
+            "detail": {
+                "title": "Grup"
+            },
+            "adi": "Adi",
+            "katsayi": "Katsayi"
+        }
+    }
+}

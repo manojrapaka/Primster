@@ -1,0 +1,25 @@
+{
+    "primApp": {
+        "hakedis" : {
+            "home": {
+                "title": "Hakediss",
+                "createLabel": "Create a new Hakedis",
+                "createOrEditLabel": "Create or edit a Hakedis"
+            },
+            "created": "A new Hakedis is created with identifier {{ param }}",
+            "updated": "A Hakedis is updated with identifier {{ param }}",
+            "deleted": "A Hakedis is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Hakedis {{ id }}?"
+            },
+            "detail": {
+                "title": "Hakedis"
+            },
+            "tarih": "Tarih",
+            "basTarih": "BasTarih",
+            "bitTarih": "BitTarih",
+            "prim": "Prim",
+            "calisan": "Calisan"
+        }
+    }
+}

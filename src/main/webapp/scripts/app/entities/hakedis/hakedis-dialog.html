@@ -1,0 +1,68 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myHakedisLabel" translate="primApp.hakedis.home.createOrEditLabel">Create or edit a Hakedis</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="hakedis.id" readonly>
+        </div>
+        <div class="form-group">
+            <label translate="primApp.hakedis.tarih" for="field_tarih">Tarih</label>
+            <input type="date" class="form-control" name="tarih" id="field_tarih"
+                    ng-model="hakedis.tarih"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="primApp.hakedis.basTarih" for="field_basTarih">BasTarih</label>
+            <input type="date" class="form-control" name="basTarih" id="field_basTarih"
+                    ng-model="hakedis.basTarih"
+                    required>
+            <div ng-show="editForm.basTarih.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.basTarih.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="primApp.hakedis.bitTarih" for="field_bitTarih">BitTarih</label>
+            <input type="date" class="form-control" name="bitTarih" id="field_bitTarih"
+                    ng-model="hakedis.bitTarih"
+                    required>
+            <div ng-show="editForm.bitTarih.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.bitTarih.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="primApp.hakedis.prim" for="field_prim">Prim</label>
+            <input type="number" class="form-control" name="prim" id="field_prim"
+                    ng-model="hakedis.prim"
+                    >
+        </div>
+
+        <div class="form-group">
+            <label translate="primApp.hakedis.calisan" for="field_calisan">calisan</label>
+            <select class="form-control" id="field_calisan" name="calisan" ng-model="hakedis.calisan" ng-options="calisan as calisan.adi for calisan in calisans track by calisan.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>
