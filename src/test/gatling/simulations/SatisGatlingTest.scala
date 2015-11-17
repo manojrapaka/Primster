@@ -67,7 +67,7 @@ class SatisGatlingTest extends Simulation {
             .exec(http("Create new satis")
             .post("/api/satiss")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "faturaNo":"SAMPLE_TEXT", "tarih":"2020-01-01T00:00:00.000Z", "tutar":null}""")).asJSON
+            .body(StringBody("""{"id":null, "faturaNo":"SAMPLE_TEXT", "tarih":"2020-01-01T00:00:00.000Z", "tutar":null, "faturaTarih":"2020-01-01T00:00:00.000Z"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_satis_url")))
             .pause(10)

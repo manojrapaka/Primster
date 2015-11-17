@@ -42,6 +42,12 @@ public class Satis implements Serializable {
     @Min(value = 0)        
     @Column(name = "tutar", nullable = false)
     private Double tutar;
+    
+    @Type(type = "org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
+    @JsonSerialize(using = CustomLocalDateSerializer.class)
+    @JsonDeserialize(using = ISO8601LocalDateDeserializer.class)
+    @Column(name = "fatura_tarih", nullable = false)
+    private LocalDate faturaTarih;
 
     @ManyToOne
     private Calisan calisan;
@@ -79,6 +85,14 @@ public class Satis implements Serializable {
 
     public void setTutar(Double tutar) {
         this.tutar = tutar;
+    }
+
+    public LocalDate getFaturaTarih() {
+        return faturaTarih;
+    }
+
+    public void setFaturaTarih(LocalDate faturaTarih) {
+        this.faturaTarih = faturaTarih;
     }
 
     public Calisan getCalisan() {
@@ -125,6 +139,7 @@ public class Satis implements Serializable {
                 ", faturaNo='" + faturaNo + "'" +
                 ", tarih='" + tarih + "'" +
                 ", tutar='" + tutar + "'" +
+                ", faturaTarih='" + faturaTarih + "'" +
                 '}';
     }
 }

@@ -27,6 +27,7 @@
             <column name="tutar" type="double">
                 <constraints nullable="false" />
             </column>
+            <column name="fatura_tarih" type="date"/>
             <column name="calisan_id" type="bigint"/>
             <column name="ulke_id" type="bigint"/>
         </createTable>

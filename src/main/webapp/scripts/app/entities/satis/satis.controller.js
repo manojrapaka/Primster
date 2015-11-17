@@ -49,6 +49,7 @@ angular.module('primApp')
                 faturaNo: null,
                 tarih: null,
                 tutar: null,
+                faturaTarih: null,
                 id: null
             };
         };

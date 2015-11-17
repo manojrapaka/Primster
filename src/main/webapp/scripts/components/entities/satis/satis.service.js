@@ -9,6 +9,7 @@ angular.module('primApp')
                 transformResponse: function (data) {
                     data = angular.fromJson(data);
                     data.tarih = DateUtils.convertLocaleDateFromServer(data.tarih);
+                    data.faturaTarih = DateUtils.convertLocaleDateFromServer(data.faturaTarih);
                     return data;
                 }
             },
@@ -16,6 +17,7 @@ angular.module('primApp')
                 method: 'PUT',
                 transformRequest: function (data) {
                     data.tarih = DateUtils.convertLocaleDateToServer(data.tarih);
+                    data.faturaTarih = DateUtils.convertLocaleDateToServer(data.faturaTarih);
                     return angular.toJson(data);
                 }
             },
@@ -23,6 +25,7 @@ angular.module('primApp')
                 method: 'POST',
                 transformRequest: function (data) {
                     data.tarih = DateUtils.convertLocaleDateToServer(data.tarih);
+                    data.faturaTarih = DateUtils.convertLocaleDateToServer(data.faturaTarih);
                     return angular.toJson(data);
                 }
             }

@@ -35,6 +35,11 @@
                 "min"
             ],
             "fieldValidateRulesMin": 0
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "faturaTarih",
+            "fieldType": "LocalDate"
         }
     ],
     "changelogDate": "20151105200301",

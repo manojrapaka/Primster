@@ -51,6 +51,9 @@ public class SatisResourceTest {
     private static final Double DEFAULT_TUTAR = 0D;
     private static final Double UPDATED_TUTAR = 1D;
 
+    private static final LocalDate DEFAULT_FATURA_TARIH = new LocalDate(0L);
+    private static final LocalDate UPDATED_FATURA_TARIH = new LocalDate();
+
     @Inject
     private SatisRepository satisRepository;
 
@@ -80,6 +83,7 @@ public class SatisResourceTest {
         satis.setFaturaNo(DEFAULT_FATURA_NO);
         satis.setTarih(DEFAULT_TARIH);
         satis.setTutar(DEFAULT_TUTAR);
+        satis.setFaturaTarih(DEFAULT_FATURA_TARIH);
     }
 
     @Test
@@ -101,6 +105,7 @@ public class SatisResourceTest {
         assertThat(testSatis.getFaturaNo()).isEqualTo(DEFAULT_FATURA_NO);
         assertThat(testSatis.getTarih()).isEqualTo(DEFAULT_TARIH);
         assertThat(testSatis.getTutar()).isEqualTo(DEFAULT_TUTAR);
+        assertThat(testSatis.getFaturaTarih()).isEqualTo(DEFAULT_FATURA_TARIH);
     }
 
     @Test
@@ -134,7 +139,8 @@ public class SatisResourceTest {
                 .andExpect(jsonPath("$.[*].id").value(hasItem(satis.getId().intValue())))
                 .andExpect(jsonPath("$.[*].faturaNo").value(hasItem(DEFAULT_FATURA_NO.toString())))
                 .andExpect(jsonPath("$.[*].tarih").value(hasItem(DEFAULT_TARIH.toString())))
-                .andExpect(jsonPath("$.[*].tutar").value(hasItem(DEFAULT_TUTAR.doubleValue())));
+                .andExpect(jsonPath("$.[*].tutar").value(hasItem(DEFAULT_TUTAR.doubleValue())))
+                .andExpect(jsonPath("$.[*].faturaTarih").value(hasItem(DEFAULT_FATURA_TARIH.toString())));
     }
 
     @Test
@@ -150,7 +156,8 @@ public class SatisResourceTest {
             .andExpect(jsonPath("$.id").value(satis.getId().intValue()))
             .andExpect(jsonPath("$.faturaNo").value(DEFAULT_FATURA_NO.toString()))
             .andExpect(jsonPath("$.tarih").value(DEFAULT_TARIH.toString()))
-            .andExpect(jsonPath("$.tutar").value(DEFAULT_TUTAR.doubleValue()));
+            .andExpect(jsonPath("$.tutar").value(DEFAULT_TUTAR.doubleValue()))
+            .andExpect(jsonPath("$.faturaTarih").value(DEFAULT_FATURA_TARIH.toString()));
     }
 
     @Test
@@ -173,6 +180,7 @@ public class SatisResourceTest {
         satis.setFaturaNo(UPDATED_FATURA_NO);
         satis.setTarih(UPDATED_TARIH);
         satis.setTutar(UPDATED_TUTAR);
+        satis.setFaturaTarih(UPDATED_FATURA_TARIH);
 
         restSatisMockMvc.perform(put("/api/satiss")
                 .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -186,6 +194,7 @@ public class SatisResourceTest {
         assertThat(testSatis.getFaturaNo()).isEqualTo(UPDATED_FATURA_NO);
         assertThat(testSatis.getTarih()).isEqualTo(UPDATED_TARIH);
         assertThat(testSatis.getTutar()).isEqualTo(UPDATED_TUTAR);
+        assertThat(testSatis.getFaturaTarih()).isEqualTo(UPDATED_FATURA_TARIH);
     }
 
     @Test

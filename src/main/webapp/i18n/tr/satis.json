@@ -15,6 +15,7 @@
             "faturaNo": "FaturaNo",
             "tarih": "Tarih",
             "tutar": "Tutar",
+            "faturaTarih": "FaturaTarih",
             "calisan": "Calisan",
             "ulke": "Ulke"
         }
